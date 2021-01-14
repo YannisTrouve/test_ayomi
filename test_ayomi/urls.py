@@ -23,6 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.LoginView.as_view()),
     path('logout/', views.LogoutView.as_view()),
-    path('backoffice/', login_required(TemplateView.as_view(template_name='back/index.html'))),
+    path('backoffice/<username>' , login_required(views.UserUpdateView.as_view()), name='modifyEmail')
 
 ]

@@ -1,3 +1,9 @@
 {% csrf_token %}
-<p>Vous êtes identifié!</p>
+<p>Bonjour {{request.user.first_name}} {{request.user.last_name}}</p>
+<p> {{request.user.email}} </p>
+<form method='POST' enctype="multipart/form-data">
+    {%csrf_token%}
+    {{form}}
+    <input type="submit" name="changeData" value="Enregistrer" />
+</form>
 <p><a href="/logout/">Sortir</a></p>
