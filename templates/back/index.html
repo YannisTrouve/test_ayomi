@@ -2,13 +2,50 @@
 {% load static %}
 {% block content %}
 {% csrf_token %}
-<p>Bonjour {{request.user.first_name}} {{request.user.last_name}}</p>
+{% load crispy_forms_tags %}
+
+<h1>Bonjour {{request.user.first_name}} {{request.user.last_name}}</h1>
 <p> {{request.user.email}} </p>
-<form method='POST' enctype="multipart/form-data">
-    {%csrf_token%}
-    {{form}}
-    <input type="submit" name="changeData" value="Enregistrer" />
-</form>
+
+                    
+<script>
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Modifier les paramètres
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      	
+        <h5 class="modal-title" id="exampleModalLabel">
+        Modifier</h5>        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      	<form method='POST' enctype="multipart/form-data">
+      		{%csrf_token%}
+		<div class="form-group">
+            {{ form|crispy}}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <input type="submit" class="btn btn-primary" name="changeData" value="Enregistrer" />
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
 <p><a href="/logout/">Se déconnecter</a></p>
 
 {% endblock %}
