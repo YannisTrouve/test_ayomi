@@ -1,0 +1,196 @@
+h1 , h2 {
+	
+	color: #CA1515;
+	font-family: 'Lobster';
+}
+div {
+  color: #d5e0d8;
+}
+th {
+  color: #d5e0d8;
+}
+td {
+  color: #d5e0d8;
+}
+
+
+h1 a, h2 a{
+	color: #C25100;
+	font-family: 'Lobster';
+}
+
+
+body {
+	background-color: #181a1b;
+}
+figcaption {
+	position:absolute;
+}
+
+figure {
+	position:relative;
+}
+
+a {
+
+	font-family: 'Lobster';
+}
+
+p.blocktext {
+	margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+    color:#d5e0d8;
+}
+#login {
+    display: none;
+  }
+
+  #loggedin {
+    display: none;
+  }
+#global {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px; /* largeur obligatoire pour être centré */
+}
+
+#menu {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px; /* largeur obligatoire pour être centré */
+}
+
+.glyphicon { margin-right:5px;}
+.rating .glyphicon {font-size: 22px;}
+.rating-num { margin-top:0px;font-size: 54px; }
+.progress { margin-bottom: 5px;background: #181a1b;}
+.progress-bar { text-align: left; background: grey; }
+.rating-desc .col-md-3 {padding-right: 0px;}
+.sr-only { margin-left: 5px;overflow: visible;clip: auto; }
+.nowrap {
+  white-space:nowrap;
+}
+
+.container_logo{
+  background-color: #181a1b;
+}
+.product-device  {
+	width:50%;
+}
+.container {
+  max-width: 960px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  position:relative
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #181a1b;
+  background-color: #181a1b;
+  background-clip: padding-box;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #999;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.opaque {
+
+  /* Modern Browsers */
+
+  opacity: 0.2;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.ldBar {
+  margin-right: auto;
+  margin-left: auto;
+}
+.ldBar.label-center > .ldBar-label {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 3px #fff;
+}
+.ldBar-label:after {
+  content: "%";
+  display: inline;
+
+}
+.ldBar.no-percent .ldBar-label:after {
+  content: "";
+
+}
+
+.overflow-hidden { overflow: hidden; }
