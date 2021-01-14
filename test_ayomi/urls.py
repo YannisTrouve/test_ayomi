@@ -21,8 +21,9 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.LoginView.as_view()),
-    path('logout/', views.LogoutView.as_view()),
+    path('', views.LoginView.as_view(), name ='login'),
+    path('logout/', views.LogoutView.as_view(), name='logout'),
+    path('register/', views.Register.as_view(), name='register'),
     path('backoffice/<username>' , login_required(views.UserUpdateView.as_view()), name='modifyEmail')
 
 ]

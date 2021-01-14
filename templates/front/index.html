@@ -2,8 +2,9 @@
 {% load static %}
 {% block content %}
 <div class="body-signin text-center">
+  <div class="jumbotron">
   <div class="container">
-    <h1>AYOMI</h1>
+    <h1 class="logo">AYOMI</h1>
     <form method="post" class="form-signin"  role="form" action="/">
     {% csrf_token %}
       <div class="form-group">
@@ -12,8 +13,10 @@
       <div class="form-group">
       <input type="password" name="password" placeholder="Mot de passe">
       </div>
-      <input type="submit" value="login" />
+      <input type="submit" value="Se connecter" />
     </form>
   </div>
+  <a href="/register/">Créer un compte</a>
+</div>
 </div>
 {% endblock %}
