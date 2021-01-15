@@ -3,20 +3,20 @@
 {% block content %}
 <div class="body-signin text-center">
   <div class="jumbotron">
-  <div class="container">
-    <h1 class="logo">AYOMI</h1>
-    <form method="post" class="form-signin"  role="form" action="/">
-    {% csrf_token %}
-      <div class="form-group">
-      <input type="text" name="username" placeholder="Utilisateur">
-      </div>
-      <div class="form-group">
-      <input type="password" name="password" placeholder="Mot de passe">
-      </div>
-      <input type="submit" value="Se connecter" />
-    </form>
+    <div class="container">
+      <h1 class="logo">AYOMI</h1>
+      <form method="post" class="form-signin"  role="form" action="/">
+      {% csrf_token %}
+        <div class="form-group">
+          <input type="text" name="username" placeholder="Utilisateur">
+        </div>
+        <div class="form-group">
+          <input type="password" name="password" placeholder="Mot de passe">
+        </div>
+        <input type="submit" value="Se connecter" />
+      </form>
+    </div>
+    <a href="/register/">Créer un compte</a>
   </div>
-  <a href="/register/">Créer un compte</a>
-</div>
 </div>
 {% endblock %}

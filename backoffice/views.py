@@ -24,12 +24,14 @@ class Register(CreateView):
 class LoginView(TemplateView):
   """
     Class to Login to the application.
+    Can be approuved by using forms.
   """
   template_name = 'front/index.html'
   def post(self, request, **kwargs):
     """
       Take all arguments in the inputs and post it 
       to the Django user authentification system to be log in.
+
     """
     username = request.POST.get('username', False)
     password = request.POST.get('password', False)

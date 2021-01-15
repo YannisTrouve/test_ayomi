@@ -15,8 +15,8 @@ class UserCreateForm(UserCreationForm):
 	"""
 
 
-	first_name = forms.CharField(max_length=30, required=False, help_text='Optionnel.')
-	last_name = forms.CharField(max_length=30, required=False, help_text='Optionnel.')
+	prénom = forms.CharField(max_length=30, required=False, help_text='Optionnel.')
+	nom = forms.CharField(max_length=30, required=False, help_text='Optionnel.')
 	email = forms.EmailField(max_length=254, required=True, help_text='Obligatoire.')
 
 	class Meta:

@@ -1,21 +1,21 @@
 {% extends '../base.html' %}
 {% load static %}
 {% block content %}
-{% load crispy_forms_tags %}
-
-<div class="body-signin text-center">
+<div class="body-signin">
   <div class="jumbotron">
-  <div class="container">
-    <h1 class="logo">Créer un compte</h1>
-    <form method="post" class="form-signin"  enctype="multipart/form-data">
-    {% csrf_token %}
-      <div class="form-group">
-      	{{ form | crispy }}
-      </div>
-      <input type="submit" value="S'enregistrer" />
-    </form>
+    <div class="container">
+      <h1 class="logo">Créer un compte</h1>
+      <form method="post" class="form-signin"  enctype="multipart/form-data">
+      {% csrf_token %}
+        <div class="form-group">
+        	{{ form.as_ul}}
+        </div>
+        <input type="submit" value="S'enregistrer" />
+      </form>
+    </div>
+    <div class='text-center'>
+    <a href="/">Se connecter</a>
   </div>
-  <a href="/">Se connecter</a>
-</div>
+  </div>
 </div>
 {% endblock %}
