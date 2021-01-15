@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms',
+    'crispy_forms', #Added for beautilful forms
 ]
 
 MIDDLEWARE = [
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'test_ayomi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')], #Emplacement des templates
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], #Directory of template files
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -101,8 +101,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LOGIN_REDIRECT_URL = '/backoffice/'
-LOGIN_URL ='/'
+
+
+
 
 
 # Internationalization
@@ -118,6 +119,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+#Bootstrap 4 for Crispy forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
